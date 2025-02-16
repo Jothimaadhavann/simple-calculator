@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f2; 
+    margin: 0;
+}
+.calculator {
+    background-color: #ff99cc; 
+    border: 2px solid #d147a3; 
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+}
+#result {
+    width: calc(100% - 20px);
+    padding: 15px;
+    font-size: 28px;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px solid #d147a3;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.clear-btn {
+    width: 100%; 
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff004d; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+input[type="button"] {
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+input[type="button"]:not([value="clear"], [value="="], [value="+"], [value="-"], [value="*"], [value="/"]) {
+    background-color: #ff66b2; /* Medium pink */
+    color: white;
+}
+input[type="button"][value="+"],
+input[type="button"][value="-"],
+input[type="button"][value="*"],
+input[type="button"][value="/"] {
+    background-color: #ff3385; 
+    color: white;
+}
+input[type="button"][value="="] {
+    background-color: #8f3e59; 
+    color: white;
+    font-size: 24px;
+}
